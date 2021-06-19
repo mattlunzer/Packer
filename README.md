@@ -42,11 +42,11 @@ If the above command lists the Packer version, you are ready to get started.
 > New-AzADServicePrincipal -DisplayName "PackerSP$(Get-Random)"
 </pre>
 
-> #1 "*New-AzADServicePrincipal has the ability to assign a role to the service principal with the Role and Scope parameters. If both are omitted, the contributor role is assigned to the service principal. The default values for the Role and Scope parameters are Contributor for the current subscription*." 
+> - "*New-AzADServicePrincipal has the ability to assign a role to the service principal with the Role and Scope parameters. If both are omitted, the contributor role is assigned to the service principal. The default values for the Role and Scope parameters are Contributor for the current subscription*." 
 
 The above is actually important because Packer creates a temporary resource group during the build process and it deletes it after the completion of the build. You can define a build resource group in the Packer build file but I didn't do that in my case so I'm not including it here. If you define a build resource group, you can apply an improved principal of least privledge.
 
-> #2 *If your organization's Azure AD is configured with "Users can register applications" setting is set to No the service principal that creates the service principal should belong to the "Application Developer" Azure AD Role which grants the necessry rights to create an App Registration.*
+> - *If your organization's Azure AD is configured with "Users can register applications" setting is set to No the service principal that creates the service principal should belong to the "Application Developer" Azure AD Role which grants the necessry rights to create an App Registration.*
 
 3. A Resource Group. This is the target resource group for the managed image.
 
@@ -68,9 +68,9 @@ Ultimately you will end up with something like this
 
 Pro-Tip. I find it a lot easier to provision a Gallery image from the portal and in the last stage of the provisioning workflow click **Download a template for automation** and review the ARM template for these details. See images below.
 
-image1
+![GitHub Logo](/images/packerImage1.jpg)
 
-image2
+![GitHub Logo](/images/packerImage2.jpg)
 
 
 
