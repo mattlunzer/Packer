@@ -68,12 +68,12 @@ Ultimately you will end up with something like this
 
 Pro-Tip. I find it a lot easier to provision a Gallery image from the portal and in the last stage of the provisioning workflow click **Download a template for automation** and review the ARM template for these details. See images below.
 
-> ![GitHub Logo](images/packerImage1.png)
+> ![GitHub Logo](images/packerImage1.PNG)
 
 
-> ![GitHub Logo](images/packerImage2.png)
+> ![GitHub Logo](images/packerImage2.PNG)
 
-## The Packer build File
+## The Packer build file
 
 The requirements for the Packer Build file are here https://www.packer.io/docs/templates/legacy_json_templates
 
